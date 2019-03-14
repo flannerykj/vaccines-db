@@ -68,8 +68,8 @@ module.exports = {
       tradename_icon_public_en: {
         type: Sequelize.STRING
       },
-      typical_dose_size: {
-        type: Sequelize.INTEGER
+      typical_dose_amount: {
+        type: Sequelize.DECIMAL
       },
       dose_unit_of_measurement: {
         type: Sequelize.STRING

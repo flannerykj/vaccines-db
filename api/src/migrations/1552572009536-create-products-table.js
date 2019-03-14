@@ -25,7 +25,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       concept_status: {
-        type: Sequelize.ENUM('Cancelled Post Market', 'Marketed', 'Dormant', 'Approved')
+        type: Sequelize.ENUM('Cancelled Post Market', 'Cancelled Pre Market', 'Marketed', 'Dormant', 'Approved')
       },
       history_date: {
         type: Sequelize.DATE

@@ -85,36 +85,36 @@ concept_code,concept_name,display_name_en,display_name_fr,effective_date,concept
 23021000087106,Varicella-zoster virus surface glycoprotein E antigen (substance),Varicella-zoster virus surface glycoprotein E antigen,Antigène glycoprotéine E de surface du virus varicelle-zona,20180430,Active
 121005009,Varicellavirus antigen (substance),Varicella antigen,antigène d'un varicellovirus,20161031,Active
 8471000087100,Vi polysaccharide typhoid antigen (substance),Vi polysaccharide typhoid antigen,antigène de la typhoïde polysaccharidique Vi,20161031,Active
-8491000087101,Acellular pertussis antigen (substance),Acellular pertussis antigen,Antigène coquelucheux acellulaire,20170430,Not Active
-8251000087107,Bacillus Calmette Guerin antigen (substance),Bacillus Calmette Guerin antigen,Antigène de Mycobacterium tuberculosis,20170430,Not Active
-8261000087105,Cholera antigen (substance),Cholera antigen,Antigène du choléra,20170430,Not Active
-8661000087107,Cholera toxin B-subunit (substance),Enterotoxigenic e. coli antigen,,20160318,Not Active
-8501000087109,Diphtheria toxoid (substance),Diphtheria toxoid,Anatoxine diphtérique,20170430,Not Active
-8271000087101,Hepatitis A antigen (substance),Hepatitis A antigen,Antigène de l'hépatite A,20170430,Not Active
-8281000087104,"Human papillomavirus, type 11 antigen (substance)","Human papillomavirus, type 11 antigen",Antigène du virus du papillome humain de type 11,20170430,Not Active
-8291000087102,"Human papillomavirus, type 6 antigen (substance)","Human papillomavirus, type 6 antigen",Antigène du virus du papillome humain de type 6,20170430,Not Active
-8671000087103,Human-bovine rotavirus reassortment G1 antigen (substance),Rota G1 serotype antigen,Antigène du sérotype Rota G1,20170430,Not Active
-8681000087101,Human-bovine rotavirus reassortment G2 antigen (substance),Rota G2 serotype antigen,Antigène du sérotype Rota G2,20170430,Not Active
-8691000087104,Human-bovine rotavirus reassortment G3 antigen (substance),Rota G3 serotype antigen,Antigène du sérotype Rota G3,20170430,Not Active
-8701000087104,Human-bovine rotavirus reassortment G4 antigen (substance),Rota G4 serotype antigen,Antigène du sérotype Rota G4,20170430,Not Active
-8711000087102,Human-bovine rotavirus reassortment P1A (8) antigen (substance),Rota P1A (8) serotype antigen,Antigène du sérotype Rota P1A (8),20170430,Not Active
-8751000087103,Live attenuated human G1 strain P(8) genotype antigen (substance),Rota G1 (P8) serotype antigen,Antigène du sérotype Rota G1 (P8),20170430,Not Active
-8311000087101,Live poliomyelitis antigen (substance),Live poliomyelitis antigen,Antigène de la polio vivant,20170430,Not Active
-8721000087105,Live unattenuated vaccinia virus antigen (substance),Smallpox antigen,Antigène de la variole,20170430,Not Active
-8321000087109,Lyme antigen (substance),Lyme antigen,Antigène de la maladie de Lyme,20170430,Not Active
-8381000087105,Neisseria meningitidis conjugate antigen (substance),Meningococcal conjugate antigen,Antigène du méningocoque conjugué,20170430,Not Active
-8511000087106,Neisseria meningitidis conjugate group A antigen (substance),Meningococcal conjugate group A antigen,Antigène du méningocoque conjugué du sérogroupe A,20170430,Not Active
-8521000087103,Neisseria meningitidis conjugate group C antigen (substance),Meningococcal conjugate group C antigen,Antigène du méningocoque conjugué du sérogroupe C,20170430,Not Active
-8531000087101,Neisseria meningitidis conjugate group W-135 antigen (substance),Meningococcal conjugate group W-135 antigen,Antigène du méningocoque conjugué du sérogroupe W-135,20170430,Not Active
-8541000087107,Neisseria meningitidis conjugate group Y antigen (substance),Meningococcal conjugate group Y antigen,Antigène du méningocoque conjugué du sérogroupe Y,20170430,Not Active
-8391000087107,Neisseria meningitidis polysaccharide antigen (substance),Meningococcal polysaccharide antigen,Antigène polysaccharidique du méningocoque,20170430,Not Active
-8551000087105,Neisseria meningitidis polysaccharide group A antigen (substance),Meningococcal polysaccharide group A antigen,Antigène polysaccharidique du méningocoque du sérogroupe A,20170430,Not Active
-8561000087108,Neisseria meningitidis polysaccharide group C antigen (substance),Meningococcal polysaccharide group C antigen,Antigène polysaccharidique du méningocoque du sérogroupe C,20170430,Not Active
-8571000087104,Neisseria meningitidis polysaccharide group W-135 antigen (substance),Meningococcal polysaccharide group W-135 antigen,Antigène polysaccharidique du méningocoque du sérogroupe W-135,20170430,Not Active
-8581000087102,Neisseria meningitidis polysaccharide group Y antigen (substance),Meningococcal polysaccharide group Y antigen,Antigène polysaccharidique du méningocoque du sérogroupe Y,20170430,Not Active
-8331000087106,Plague antigen (substance),Plague antigen,Antigène de la peste,20170430,Not Active
-8341000087100,Poliomyelitis antigen (substance),Poliomyelitis antigen,Antigène de poliovirus,20170430,Not Active
-8411000087107,Streptococcus pneumoniae conjugate antigen (substance),Pneumococcal conjugate antigen,Antigène du pneumocoque conjugué,20170430,Not Active
-412375000,Tetanus vaccine (substance),Tetanus toxoid,,20160318,Not Active
-8481000087103,Whole cell pertussis antigen (substance),Whole cell pertussis antigen,Antigène coquelucheux à germes entiers,20170430,Not Active
-8371000087108,Yellow fever antigen (substance),Yellow fever antigen,Antigène du virus de la fièvre jaune,20170430,Not Active
+8491000087101,Acellular pertussis antigen (substance),Acellular pertussis antigen,Antigène coquelucheux acellulaire,20170430,Inactive
+8251000087107,Bacillus Calmette Guerin antigen (substance),Bacillus Calmette Guerin antigen,Antigène de Mycobacterium tuberculosis,20170430,Inactive
+8261000087105,Cholera antigen (substance),Cholera antigen,Antigène du choléra,20170430,Inactive
+8661000087107,Cholera toxin B-subunit (substance),Enterotoxigenic e. coli antigen,,20160318,Inactive
+8501000087109,Diphtheria toxoid (substance),Diphtheria toxoid,Anatoxine diphtérique,20170430,Inactive
+8271000087101,Hepatitis A antigen (substance),Hepatitis A antigen,Antigène de l'hépatite A,20170430,Inactive
+8281000087104,"Human papillomavirus, type 11 antigen (substance)","Human papillomavirus, type 11 antigen",Antigène du virus du papillome humain de type 11,20170430,Inactive
+8291000087102,"Human papillomavirus, type 6 antigen (substance)","Human papillomavirus, type 6 antigen",Antigène du virus du papillome humain de type 6,20170430,Inactive
+8671000087103,Human-bovine rotavirus reassortment G1 antigen (substance),Rota G1 serotype antigen,Antigène du sérotype Rota G1,20170430,Inactive
+8681000087101,Human-bovine rotavirus reassortment G2 antigen (substance),Rota G2 serotype antigen,Antigène du sérotype Rota G2,20170430,Inactive
+8691000087104,Human-bovine rotavirus reassortment G3 antigen (substance),Rota G3 serotype antigen,Antigène du sérotype Rota G3,20170430,Inactive
+8701000087104,Human-bovine rotavirus reassortment G4 antigen (substance),Rota G4 serotype antigen,Antigène du sérotype Rota G4,20170430,Inactive
+8711000087102,Human-bovine rotavirus reassortment P1A (8) antigen (substance),Rota P1A (8) serotype antigen,Antigène du sérotype Rota P1A (8),20170430,Inactive
+8751000087103,Live attenuated human G1 strain P(8) genotype antigen (substance),Rota G1 (P8) serotype antigen,Antigène du sérotype Rota G1 (P8),20170430,Inactive
+8311000087101,Live poliomyelitis antigen (substance),Live poliomyelitis antigen,Antigène de la polio vivant,20170430,Inactive
+8721000087105,Live unattenuated vaccinia virus antigen (substance),Smallpox antigen,Antigène de la variole,20170430,Inactive
+8321000087109,Lyme antigen (substance),Lyme antigen,Antigène de la maladie de Lyme,20170430,Inactive
+8381000087105,Neisseria meningitidis conjugate antigen (substance),Meningococcal conjugate antigen,Antigène du méningocoque conjugué,20170430,Inactive
+8511000087106,Neisseria meningitidis conjugate group A antigen (substance),Meningococcal conjugate group A antigen,Antigène du méningocoque conjugué du sérogroupe A,20170430,Inactive
+8521000087103,Neisseria meningitidis conjugate group C antigen (substance),Meningococcal conjugate group C antigen,Antigène du méningocoque conjugué du sérogroupe C,20170430,Inactive
+8531000087101,Neisseria meningitidis conjugate group W-135 antigen (substance),Meningococcal conjugate group W-135 antigen,Antigène du méningocoque conjugué du sérogroupe W-135,20170430,Inactive
+8541000087107,Neisseria meningitidis conjugate group Y antigen (substance),Meningococcal conjugate group Y antigen,Antigène du méningocoque conjugué du sérogroupe Y,20170430,Inactive
+8391000087107,Neisseria meningitidis polysaccharide antigen (substance),Meningococcal polysaccharide antigen,Antigène polysaccharidique du méningocoque,20170430,Inactive
+8551000087105,Neisseria meningitidis polysaccharide group A antigen (substance),Meningococcal polysaccharide group A antigen,Antigène polysaccharidique du méningocoque du sérogroupe A,20170430,Inactive
+8561000087108,Neisseria meningitidis polysaccharide group C antigen (substance),Meningococcal polysaccharide group C antigen,Antigène polysaccharidique du méningocoque du sérogroupe C,20170430,Inactive
+8571000087104,Neisseria meningitidis polysaccharide group W-135 antigen (substance),Meningococcal polysaccharide group W-135 antigen,Antigène polysaccharidique du méningocoque du sérogroupe W-135,20170430,Inactive
+8581000087102,Neisseria meningitidis polysaccharide group Y antigen (substance),Meningococcal polysaccharide group Y antigen,Antigène polysaccharidique du méningocoque du sérogroupe Y,20170430,Inactive
+8331000087106,Plague antigen (substance),Plague antigen,Antigène de la peste,20170430,Inactive
+8341000087100,Poliomyelitis antigen (substance),Poliomyelitis antigen,Antigène de poliovirus,20170430,Inactive
+8411000087107,Streptococcus pneumoniae conjugate antigen (substance),Pneumococcal conjugate antigen,Antigène du pneumocoque conjugué,20170430,Inactive
+412375000,Tetanus vaccine (substance),Tetanus toxoid,,20160318,Inactive
+8481000087103,Whole cell pertussis antigen (substance),Whole cell pertussis antigen,Antigène coquelucheux à germes entiers,20170430,Inactive
+8371000087108,Yellow fever antigen (substance),Yellow fever antigen,Antigène du virus de la fièvre jaune,20170430,Inactive
