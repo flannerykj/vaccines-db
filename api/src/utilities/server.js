@@ -9,7 +9,9 @@ const logger = require('./logger');
 
 const redisClient = redis.createClient(
   process.env.REDIS_PORT,
-  process.env.REDIS_HOST
+  process.env.REDIS_HOST, {
+    auth_pass: process.env.REDIS_PASSWORD
+  }
 );
 redisClient.select(1);
 
