@@ -13,7 +13,8 @@ const attrs = {
 
 class Antigen extends Model {
   static associate(models) {
-    // this.belongsTo(models.ProviderInvoice);
+    this.belongsToMany(models.TradenameVaccine, { through: 'TradenameVaccineAntigens' });
+    this.belongsToMany(models.Disease, { through: 'DiseaseAntigens' });
   }
 
   get json() {
