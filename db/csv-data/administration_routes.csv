@@ -1,0 +1,8 @@
+concept_code,concept_name,display_name_en,display_name_fr,definition,abbreviation
+26643006,oral route,Oral,voie orale,,PO
+34206005,subcutaneous route,Subcutaneous,voie subcutanée,,SC
+46713006,nasal route,Intranasal,voie nasale,,IN
+47625008,intravenous route,Intravenous,voie intraveineuse,For use with immune globulin products,IV
+78421000,intramuscular route,Intramuscular,voie intramusculaire,,IM
+372464004,Intradermal route,Intradermal,voie intradermique,,ID
+718329006,Infiltration route,Infiltrate,infiltrer,"For use with passive immunizing agents, specifically for IG products applied to wounds",INF
