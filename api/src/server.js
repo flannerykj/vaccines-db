@@ -1,31 +1,26 @@
 require('dotenv').config();
 
+const debug = require('debug')('express-sequelize');
 const express = require('express');
-const { setModels } = require('./models');
+const models = require('./models');
 const sequelize = require('./utilities/sequelize');
+const {
+  rateLimit,
+  logRequests,
+  logErrors,
+  useMiddleware
+} = require('./utilities/server');
 
 const app = express();
-const port = 8080;
+const port = process.env.PORT || 8080;
 
-app.get('/', (req, res) => res.send('Hello World!'));
-
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
-
-
-const initializer = require('./utilities/initializer');
-
-initializer()
-  .then((locals) => {
-    app.locals = locals;
-    setModels(sequelize, locals.DEK);
-    app.use((req, res, next) => {
-      req.sessionKey = locals.SEK;
-      next();
-    });
-    require('./Router')(app);
-    logErrors(app);
-    app.listen(port, console.log(`listening on ${port}`));
-  })
-  .catch(console.log);
+models.sequelize.sync().then(() => {
+  logRequests(app);
+  useMiddleware(app);
+  rateLimit(app);
+  require('./Router')(app);
+  logErrors(app);
+  app.listen(port, console.log(`listening on ${port}`));
+});
 
 module.exports = app;

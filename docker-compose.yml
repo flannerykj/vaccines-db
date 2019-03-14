@@ -7,12 +7,18 @@ services:
      - "8080:8080"
     links:
       - db:db
+      - redis
     depends_on:
      - db
     environment:
      - DB_HOST=db
+    volumes:
+     - ../../api/:/app
+     - ~/.config/:/root/.config
   db:
     build: ./db
     container_name: db
     ports:
       - "8083"
+  redis:
+    image: "redis:latest"

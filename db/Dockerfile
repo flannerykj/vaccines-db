@@ -4,4 +4,4 @@ ENV MYSQL_ROOT_PASSWORD sqlpassword
 
 EXPOSE 3306
 
-ADD setup.sql /docker-entrypoint-initdb.d
+ADD ./scripts/setup.sql /docker-entrypoint-initdb.d

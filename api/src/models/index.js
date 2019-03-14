@@ -1,59 +1,28 @@
-function importModels(sequelize, encKey) {
-  const models = fs.readdirSync(__dirname)
-    .filter(filterModelFiles)
-    .reduce((memo, file) => {
-      const model = sequelize.import(path.join(__dirname, file));
-      memo[model.name] = model;
-      return memo;
-    }, {});
+const fs = require('fs');
+const path = require('path');
+const Sequelize = require('sequelize');
+const sequelize = require('../utilities/sequelize');
 
-  const defsSchema = fs.readFileSync(path.join(__dirname, 'schemas', 'defs', 'defs.json'), 'utf-8');
-  // ajv.addSchema(JSON.parse(defsSchema));
-  fs.readdirSync(path.join(__dirname, 'schemas'))
-    .forEach((file) => {
-      if (file.match(/.json/)) {
-        const contents = fs.readFileSync(path.join(__dirname, 'schemas', file), 'utf-8');
-        const resolved = resolveContents(JSON.parse(contents), JSON.parse(defsSchema).definitions);
-        const schemaName = path.basename(file, '.json');
-        ajv.addSchema(resolved, schemaName);
-      }
-    });
+const basename = path.basename(__filename);
+const db = {};
 
-  Object.keys(models).forEach((key) => {
-    if (models[key].setSchema) {
-      models[key].setSchema(ajv);
-    }
+fs
+  .readdirSync(__dirname)
+  .filter(file => {
+    return (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js');
+  })
+  .forEach(file => {
+    const model = sequelize.import(path.join(__dirname, file));
+    db[model.name] = model;
   });
 
-  Object.keys(models).forEach((key) => {
-    if (models[key].associate) {
-      models[key].associate(models);
-    }
-  });
-
-  if (encKey) {
-    Object.keys(models).forEach((model) => {
-      if (models[model].setKey) {
-        models[model].setKey(encKey);
-      }
-    });
+Object.keys(db).forEach(modelName => {
+  if (db[modelName].associate) {
+    db[modelName].associate(db);
   }
-  return models;
-}
+});
 
-module.exports = (() => {
-  let m;
-  let s;
-  return {
-    setModels: (sequelize, key) => {
-      s = sequelize;
-      m = importModels(sequelize, key);
-    },
-    get models() {
-      return m;
-    },
-    get sequelize() {
-      return s;
-    }
-  };
-})();
+db.sequelize = sequelize;
+db.Sequelize = Sequelize;
+
+module.exports = db;

@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "dothealth",
+    "password": "DotHealth2017",
+    "database": "dothealth_development",
+    "host": "db",
+    "dialect": "mysql"
+  }
+}
