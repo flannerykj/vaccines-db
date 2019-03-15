@@ -19,7 +19,7 @@ const attrs = {
   ontario_clinician_friendly_tradename_en: DataTypes.STRING,
   tradename_preferred_term_en: DataTypes.STRING,
   tradename_icon_public_en: DataTypes.STRING,
-  typical_dose_size: DataTypes.INTEGER,
+  typical_dose_amount: DataTypes.INTEGER,
   dose_unit_of_measurement: DataTypes.STRING,
   strength: DataTypes.STRING,
   route: DataTypes.STRING,
@@ -32,6 +32,7 @@ const attrs = {
 class TradenameVaccine extends Model {
   static associate(models) {
     this.belongsToMany(models.Antigen, { through: 'TradenameVaccineAntigens' });
+    this.belongsToMany(models.Product, { through: 'Lots', foreignKey: 'concept_code', references: 'concept_code' });
   }
 
   get json() {
@@ -56,7 +57,7 @@ class TradenameVaccine extends Model {
         ontario_clinician_friendly_tradename_en: this.ontario_clinician_friendly_tradename_en,
         tradename_preferred_term_en: this.tradename_preferred_term_en,
         tradename_icon_public_en: this.tradename_icon_public_en,
-        typical_dose_size: this.typical_dose_size,
+        typical_dose_amount: this.typical_dose_amount,
         dose_unit_of_measurement: this.dose_unit_of_measurement,
         strength: this.strength,
         route: this.route,

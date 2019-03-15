@@ -2,7 +2,6 @@ const { Model, DataTypes } = require('sequelize');
 
 const attrs = {
   concept_code: DataTypes.STRING,
-  concept_name: DataTypes.STRING,
   din: DataTypes.INTEGER,
   brand_name: DataTypes.STRING,
   company_name: DataTypes.STRING,
@@ -14,7 +13,7 @@ const attrs = {
 
 class Product extends Model {
   static associate(models) {
-    // this.belongsTo(models.ProviderInvoice);
+    this.belongsToMany(models.TradenameVaccine, { through: 'Lots', foreignKey: 'din', references: 'din' });
   }
 
   get json() {
@@ -22,7 +21,6 @@ class Product extends Model {
       product: {
         id: this.id,
         concept_code: this.concept_code,
-        concept_name: this.concept_name,
         din: this.din,
         brand_name: this.brand_name,
         company_name: this.company_name,

@@ -30,6 +30,9 @@ module.exports = {
       tradename_picklist_en: {
         type: Sequelize.STRING
       },
+      din: {
+        type: Sequelize.INTEGER
+      },
       review_date: {
         type: Sequelize.DATE
       },
