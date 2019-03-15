@@ -31,6 +31,7 @@ const attrs = {
 
 class TradenameVaccine extends Model {
   static associate(models) {
+    this.belongsTo(models.GenericVaccine);
     this.belongsToMany(models.Antigen, { through: 'TradenameVaccineAntigens' });
     this.belongsToMany(models.Product, { through: 'Lots', foreignKey: 'concept_code', references: 'concept_code' });
   }

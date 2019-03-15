@@ -21,7 +21,7 @@ const attrs = {
 
 class GenericVaccine extends Model {
   static associate(models) {
-    // this.belongsTo(models.ProviderInvoice);
+    this.hasMany(models.TradenameVaccine);
   }
 
   get json() {

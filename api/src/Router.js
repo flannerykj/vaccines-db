@@ -1,6 +1,6 @@
 const express = require('express');
 const multer = require('multer');
-const genericVaccinesController = require('./controllers/GenericVaccinesController');
+const tradenameVaccinesController = require('./controllers/VaccinesController');
 
 const storage = multer.memoryStorage();
 const upload = multer({
@@ -10,13 +10,16 @@ const upload = multer({
 const apiRouter = express.Router({ mergeParams: true });
 
 apiRouter.route('/vaccines')
-  .get(genericVaccinesController.getVaccines);
+  .get(tradenameVaccinesController.getVaccines);
 
 apiRouter.route('/vaccines/antigens')
-  .post(upload.single('csv'), genericVaccinesController.importAntigenJoins);
+  .post(upload.single('csv'), tradenameVaccinesController.importAntigenJoins);
 
 apiRouter.route('/vaccines/lots')
-  .post(upload.single('csv'), genericVaccinesController.importLots);
+  .post(upload.single('csv'), tradenameVaccinesController.importLots);
+
+apiRouter.route('/vaccines/parents')
+  .post(upload.single('csv'), tradenameVaccinesController.addGenericVaccineId);
 
 module.exports = (app) => {
   app.get('/', (req, res) => {

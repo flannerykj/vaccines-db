@@ -13,6 +13,29 @@ async function getVaccines(req, res, next) {
     next(new Error(err));
   }
 }
+
+async function addGenericVaccineId(req, res, next) {
+  try {
+    const vaccines = await models.TradenameVaccine.findAll();
+
+    await sequelize.transaction(async (transaction) => {
+      return Promise.all(vaccines.map(async (v) => {
+        const { generic_parent_concept_code } = v;
+        const parent = await models.GenericVaccine.findOne({ where: { concept_code: generic_parent_concept_code } });
+        if (parent) {
+          return v.update({
+            GenericVaccineId: parent.id
+          }, { transaction })
+        }
+        console.log('no parent for: ', v);
+        return null;
+      }));
+    })
+    res.status(200).send({});
+  } catch (error) {
+    next(new Error(error));
+  }
+}
 async function importLots(req, res, next) {
   try {
     const string = req.file.buffer.toString();
@@ -81,6 +104,7 @@ async function importAntigenJoins(req, res, next) {
 }
 module.exports = {
   getVaccines,
+  addGenericVaccineId,
   importAntigenJoins,
   importLots
 }
