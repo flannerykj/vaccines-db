@@ -12,14 +12,16 @@ module.exports = {
         references: {
           model: 'Diseases',
           key: 'id'
-        }
+        },
+        onDelete: 'CASCADE'
       },
       AntigenId: {
         type: Sequelize.INTEGER,
         references: {
           model: 'Antigens',
           key: 'id'
-        }
+        },
+        onDelete: 'CASCADE'
       },
       createdAt: {
         type: Sequelize.DATE

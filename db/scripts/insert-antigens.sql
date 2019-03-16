@@ -1,5 +1,6 @@
 LOAD DATA INFILE '/var/lib/mysql-files/antigens.csv'
 INTO TABLE Antigens
+CHARACTER SET UTF8
 FIELDS TERMINATED BY ','
 	ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'

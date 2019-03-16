@@ -13,7 +13,8 @@ const attrs = {
 
 class Lot extends Model {
   static associate(models) {
-    // this.belongsTo(models.ProviderInvoice);
+    this.belongsTo(models.TradenameVaccine);
+    this.belongsTo(models.Product);
   }
 
   get json() {

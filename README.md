@@ -8,12 +8,10 @@ Run db migrations
 ```
 
 Insert data
-`docker cp csv-data/generic_vaccines.csv db:/var/lib/mysql-files/generic_vaccines.csv`
-`docker cp scripts/insert-generic-vaccines.sql db:insert-generic-vaccines.sql`
+`docker cp csv-data/. db:/var/lib/mysql-files/`
+`docker cp scripts/. db:.`
 `docker exec -it db bash`
-`mysql -u root -p`
-`use vaccines;`
-`source insert-generic-vaccines.sql;`
+`mysql -u root -p --default-character-set=utf8 vaccines < insert.sql`
 
 
 

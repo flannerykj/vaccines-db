@@ -8,6 +8,12 @@ const dbConfig = {
   database: process.env.DATABASE_DATABASE,
   host: process.env.DATABASE_HOST,
   dialect: 'mysql',
+  define: {
+    charset: 'utf8',
+    dialectOptions: {
+      collate: 'utf8_general_ci'
+    }
+  },
   logging: (arg) => {
     if (env === 'development') {
       console.log(arg);

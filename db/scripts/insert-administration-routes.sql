@@ -1,5 +1,6 @@
 LOAD DATA INFILE '/var/lib/mysql-files/administration_routes.csv'
 INTO TABLE AdministrationRoutes
+CHARACTER SET UTF8
 FIELDS TERMINATED BY ','
 	ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'

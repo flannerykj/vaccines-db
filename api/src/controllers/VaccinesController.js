@@ -5,15 +5,27 @@ const parseCSV = promisify(csv.parse);
 const models = require('../models');
 const { sequelize } = require('../models');
 
-async function getVaccines(req, res, next) {
+async function getGenericVaccines(req, res, next) {
   try {
-    const vaccines = await models.GenericVaccine.findAll();
+    const include = [{ model: models.TradenameVaccine }];
+    const vaccines = await models.GenericVaccine.findAll({ include });
+    res.status(200).send({ vaccines });
+  } catch (err) {
+    next(new Error(err));
+  }
+}
+async function getTradenameVaccines(req, res, next) {
+  try {
+    const include = [];
+    const vaccines = await models.TradenameVaccine.findAll({ include });
     res.status(200).send({ vaccines });
   } catch (err) {
     next(new Error(err));
   }
 }
 
+
+// post to these routes once only, to import data / setup data relationships
 async function addGenericVaccineId(req, res, next) {
   try {
     const vaccines = await models.TradenameVaccine.findAll();
@@ -73,19 +85,12 @@ async function importAntigenJoins(req, res, next) {
 
     const result = await Promise.all(parsed.forEach(async (row) => {
       const vaccineCode = row['Agent SNOMED CT Id'];
-      const vaccineNameEn = row['Agent Display Name (en)'];
-      const vaccineNameFr = row['Agent Display Name (fr)'];
       const vaccine = await models.TradenameVaccine.findOne({ where: { concept_code: vaccineCode } });
 
       const antigenCode = row['Antigen SNOMED CT Id'];
-      const antigenNameEn = row['Antigen Display Name (en)'];
-      const antigenNameFr = row['Antigen Display Name (fr)'];
       const antigen = await models.Antigen.findOne({ where: { concept_code: antigenCode } });
 
       const diseaseCode = row['Disease SNOMED CT Id'];
-      const diseaseNameEn = row['Disease Display Name (en)'];
-      const diseaseNameFr = row['Disease Display Name (fr)'];
-
       const disease = await models.Disease.findOne({ where: { concept_code: diseaseCode } });
 
       if (antigen) {
@@ -103,7 +108,8 @@ async function importAntigenJoins(req, res, next) {
   }
 }
 module.exports = {
-  getVaccines,
+  getGenericVaccines,
+  getTradenameVaccines,
   addGenericVaccineId,
   importAntigenJoins,
   importLots

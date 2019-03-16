@@ -1,5 +1,6 @@
 LOAD DATA INFILE '/var/lib/mysql-files/products.csv'
 INTO TABLE Products
+CHARACTER SET UTF8
 FIELDS TERMINATED BY ','
 	ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'

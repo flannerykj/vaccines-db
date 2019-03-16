@@ -12,14 +12,16 @@ module.exports = {
         references: {
           model: 'TradenameVaccines',
           key: 'id'
-        }
+        },
+        onDelete: 'CASCADE'
       },
       ProductId: {
         type: Sequelize.INTEGER,
         references: {
           model: 'Products',
           key: 'id'
-        }
+        },
+        onDelete: 'CASCADE'
       },
       concept_code: {
         type: Sequelize.STRING

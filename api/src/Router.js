@@ -9,17 +9,19 @@ const upload = multer({
 
 const apiRouter = express.Router({ mergeParams: true });
 
-apiRouter.route('/vaccines')
-  .get(tradenameVaccinesController.getVaccines);
+apiRouter.route('/vaccines/tradename')
+  .get(tradenameVaccinesController.getTradenameVaccines);
+
+apiRouter.route('/vaccines/generic')
+  .get(tradenameVaccinesController.getGenericVaccines);
 
 apiRouter.route('/vaccines/antigens')
   .post(upload.single('csv'), tradenameVaccinesController.importAntigenJoins);
-
 apiRouter.route('/vaccines/lots')
   .post(upload.single('csv'), tradenameVaccinesController.importLots);
 
 apiRouter.route('/vaccines/parents')
-  .post(upload.single('csv'), tradenameVaccinesController.addGenericVaccineId);
+  .post(tradenameVaccinesController.addGenericVaccineId);
 
 module.exports = (app) => {
   app.get('/', (req, res) => {

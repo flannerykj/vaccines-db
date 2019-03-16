@@ -1,5 +1,6 @@
 LOAD DATA INFILE '/var/lib/mysql-files/generic_vaccines.csv'
 INTO TABLE GenericVaccines
+CHARACTER SET UTF8
 FIELDS TERMINATED BY ','
 	ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'

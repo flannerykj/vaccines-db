@@ -13,7 +13,7 @@ const attrs = {
 
 class Product extends Model {
   static associate(models) {
-    this.belongsToMany(models.TradenameVaccine, { through: 'Lots', foreignKey: 'din', references: 'din' });
+    this.belongsToMany(models.TradenameVaccine, { through: 'Lots' });
   }
 
   get json() {
